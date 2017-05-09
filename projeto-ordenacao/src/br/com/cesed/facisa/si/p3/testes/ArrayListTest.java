@@ -12,7 +12,7 @@ import org.junit.Assert;
 
 public class ArrayListTest {
 	
-	@Ignore
+
 	@Test
 	public void add(){
 		ArrayListSequencial arrayTeste = new ArrayListSequencial();
@@ -21,7 +21,7 @@ public class ArrayListTest {
 		Assert.assertTrue(arrayTeste.getInicial().getCpf() == "12345678900");
 	}
 	
-	@Ignore
+
 	@Test
 	public void remove(){
 		ArrayListSequencial arrayTeste = new ArrayListSequencial();
@@ -33,7 +33,7 @@ public class ArrayListTest {
 		Assert.assertTrue(arrayTeste.getInicial().getCpf() == "12147065670");
 	}
 	
-	@Ignore
+	
 	@Test
 	public void getByIndex(){
 		ArrayListSequencial arrayTeste = new ArrayListSequencial();

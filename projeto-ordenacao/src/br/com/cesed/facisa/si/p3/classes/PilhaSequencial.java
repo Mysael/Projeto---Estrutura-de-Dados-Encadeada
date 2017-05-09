@@ -1,10 +1,10 @@
 package br.com.cesed.facisa.si.p3.classes;
 
-public class DeckSequencial {
+public class PilhaSequencial {
 	private Pessoa inicial = null;
 	
 	
-	public DeckSequencial(){
+	public PilhaSequencial(){
 		this.inicial = null;
 	}
 	
@@ -49,8 +49,24 @@ public class DeckSequencial {
 		}
 	}
 	
+	public Pessoa top(){
+		if (this.inicial == null){
+			return null;
+		}
+		if(this.inicial.getPessoa() == null){
+			return this.inicial;
+		}else{
+			Pessoa anterior = null;
+			Pessoa proxima = this.inicial;
+			while(proxima != null){
+				anterior = proxima;
+				proxima = proxima.getPessoa();
+			}return anterior;		
+		}
+	}
+	
 	public static void main(String[] args) {
-		DeckSequencial deckTeste = new DeckSequencial();
+		PilhaSequencial deckTeste = new PilhaSequencial();
 		deckTeste.push("Maicão", 12, "12345678900");
 		deckTeste.push("george", 30, "98765432100");
 		deckTeste.push("eu", 20, "12147065670");

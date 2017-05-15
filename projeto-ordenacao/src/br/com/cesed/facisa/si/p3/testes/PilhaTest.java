@@ -8,16 +8,15 @@ import br.com.cesed.facisa.si.p3.classes.PilhaSequencial;
 import br.com.cesed.facisa.si.p3.classes.Pessoa;
 public class PilhaTest {
 
-	@Ignore
+	//@Ignore
 	@Test
 	public void push(){
 		PilhaSequencial pilhaTeste = new PilhaSequencial();
 		pilhaTeste.push("Maicão", 12, "12345678900");
 		pilhaTeste.push("george", 30, "98765432100");
-		Assert.assertTrue(pilhaTeste.getInicial().getCpf() == "12345678900");
+		Assert.assertTrue(pilhaTeste.getInicial().getPessoa().getCpf() == "98765432100");
 	}
 	
-// concertar bug
 	@Test
 	public void pop(){
 		PilhaSequencial pilhaTeste = new PilhaSequencial();
@@ -25,10 +24,10 @@ public class PilhaTest {
 		pilhaTeste.push("george", 30, "98765432100");
 		pilhaTeste.push("eu", 20, "12147065670");
 		pilhaTeste.pop();
-		Assert.assertTrue(pilhaTeste.getInicial().getNome() == null);
+		Assert.assertTrue(pilhaTeste.getInicial().getPessoa().getNome() == "george");
 	}
 	
-	@Ignore
+	//@Ignore
 	@Test
 	public void top(){
 		PilhaSequencial pilhaTeste = new PilhaSequencial();
